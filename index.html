@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Relatório analítico da Direção Técnica Nacional (FPN): nível competitivo 13–18 anos 2024–2026, densidade, elite e indicadores-objetivo até 2028.">
+<title>Natação Jovem 2024–2028</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --ground:#F3F6F8; --surface:#FFFFFF; --ink:#0F1D2E; --ink-2:#44546A; --muted:#6B7A8C; --rule:#D5DDE4; --rule-soft:#E7ECF0;
+  --accent:#0B5CAD; --accent-soft:#E3EEF9; --head:#0F2A4A; --head-ink:#FFFFFF;
+  --inf:#2a78d6; --juv:#eb6834; --jun:#1baf7a; --glo:#52514e;
+  --pos:#1E7B45; --neg:#B3261E; --band:#EDF1F4; --obj:#FFF6DC;
+  --display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"IBM Plex Sans",-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#0C1520; --surface:#131F2C; --ink:#E8EEF4; --ink-2:#B4C1CE; --muted:#8C9AAA; --rule:#2A3A4B; --rule-soft:#1D2B3A;
+    --accent:#6FB0F2; --accent-soft:#16304D; --head:#0A2440; --head-ink:#F2F6FA;
+    --inf:#3987e5; --juv:#d95926; --jun:#199e70; --glo:#a9a8a0;
+    --pos:#5CC389; --neg:#F07A72; --band:#18263A; --obj:#3A3218;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#0C1520; --surface:#131F2C; --ink:#E8EEF4; --ink-2:#B4C1CE; --muted:#8C9AAA; --rule:#2A3A4B; --rule-soft:#1D2B3A;
+  --accent:#6FB0F2; --accent-soft:#16304D; --head:#0A2440; --head-ink:#F2F6FA;
+  --inf:#3987e5; --juv:#d95926; --jun:#199e70; --glo:#a9a8a0;
+  --pos:#5CC389; --neg:#F07A72; --band:#18263A; --obj:#3A3218;
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:1040px;margin-inline:auto}
+header.hero{background:var(--head);color:var(--head-ink);margin-inline:-16px;padding-inline:16px;padding-block:40px 0}
+.hero .wrap{display:grid;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6vw,64px);line-height:1;margin:0;text-wrap:balance;letter-spacing:.005em}
+.lede{max-width:64ch;font-size:17px;opacity:.9;margin:0}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.14);border-top:1px solid rgba(255,255,255,.14);margin-top:14px}
+.kpi{background:var(--head);padding:16px 14px 18px}
+.kpi b{display:block;font-family:var(--display);font-weight:600;font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+.kpi span{display:block;font-size:13px;opacity:.8;margin-top:6px;line-height:1.35}
+.rope{height:8px;margin-inline:-16px;background:repeating-linear-gradient(90deg,#D9352B 0 22px,#FFFFFF 22px 30px,#0B5CAD 30px 52px,#FFFFFF 52px 60px)}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ground);border-bottom:1px solid var(--rule);margin-inline:-16px;padding-inline:16px}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-block:8px;scrollbar-width:none}
+nav.toc a{flex:none;font-family:var(--display);font-weight:600;font-size:16px;letter-spacing:.02em;color:var(--ink-2);text-decoration:none;padding:4px 10px;border-radius:4px}
+nav.toc a:hover,nav.toc a:focus-visible{background:var(--accent-soft);color:var(--accent);outline:none}
+section{padding-block:36px 8px;border-bottom:1px solid var(--rule-soft);scroll-margin-top:52px}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--display);font-weight:700;font-size:30px;line-height:1.1;margin:0 0 14px;display:flex;gap:12px;align-items:baseline;text-wrap:balance}
+h2 .n{font-family:var(--mono);font-weight:500;font-size:14px;color:var(--accent)}
+p{max-width:72ch;margin:0 0 14px}
+.muted{color:var(--muted)}
+ul.pts{list-style:none;padding:0;margin:0 0 14px;display:grid;gap:10px;max-width:78ch}
+ul.pts li{padding-left:18px;position:relative}
+ul.pts li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--accent)}
+ul.pts b{font-weight:600}
+.cap{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted);margin:18px 0 8px;text-transform:uppercase}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:6px;margin-bottom:16px}
+table{border-collapse:collapse;width:100%;font-size:14px;font-variant-numeric:tabular-nums}
+th{font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.03em;text-align:right;color:var(--ink-2);background:var(--band);padding:8px 10px;border-bottom:1px solid var(--rule);white-space:nowrap}
+td{padding:6px 10px;text-align:right;border-bottom:1px solid var(--rule-soft);white-space:nowrap}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+tr:last-child td{border-bottom:0}
+tr.tot td{font-weight:600;background:var(--band)}
+tr.grp td{border-top:1px solid var(--rule)}
+td.pos{color:var(--pos)} td.neg{color:var(--neg)}
+td.obj,th.obj{background:var(--obj)}
+td.obj{font-weight:600}
+.esc{display:inline-flex;align-items:center;gap:7px}
+.esc i{width:10px;height:10px;border-radius:2px;display:inline-block}
+.tabs{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 10px}
+.tabs button{font-family:var(--display);font-weight:600;font-size:15px;border:1px solid var(--rule);background:var(--surface);color:var(--ink-2);padding:4px 12px;border-radius:4px;cursor:pointer}
+.tabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.tabs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.fig{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:12px 8px 6px;margin-bottom:6px}
+.fig>svg{display:block;width:100%;height:auto}
+.legend svg{display:inline-block;flex:none}
+svg text{font-family:var(--body);fill:var(--ink-2);font-size:12px}
+svg .lbl{fill:var(--ink);font-weight:600;font-size:12.5px}
+svg .grid{stroke:var(--rule-soft)} svg .axis{stroke:var(--rule)} svg .zero{stroke:var(--muted)}
+svg .bandbg{fill:var(--band)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-2);padding:4px 8px 6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.two>div{min-width:0}
+.note{font-size:13px;color:var(--muted);max-width:90ch}
+footer{padding-block:28px 0;font-size:13px;color:var(--muted)}
+@media (max-width:720px){
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .kpi b{font-size:32px}
+  .two{grid-template-columns:1fr}
+  h2{font-size:26px}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+<style>body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Federação Portuguesa de Natação · Direção Técnica Nacional · setembro 2026</div>
+    <h1>Natação jovem 13–18 anos: evolução 2024–2026 e objetivos até 2028</h1>
+    <p class="lede">Relatório analítico sobre o nível competitivo, a densidade e a elite nos escalões de Infantis, Juvenis e Juniores, com projeção por gerações e indicadores-objetivo anuais.</p>
+    <div class="kpis">
+      <div class="kpi"><b>+9,9</b><span>pts no 1.º classificado (média global, 2026 vs 2024)</span></div>
+      <div class="kpi"><b>−0,2</b><span>pts no Top-16: a densidade não acompanha o topo</span></div>
+      <div class="kpi"><b>130 → 102</b><span>juniores com ≥ 600 pts (feminino: 48 → 31)</span></div>
+      <div class="kpi"><b>645</b><span>pts: objetivo 2028 para o Top-5 júnior (real 2026: 625,8)</span></div>
+    </div>
+  </div>
+  <div class="rope" aria-hidden="true" style="margin-top:28px"></div>
+</header>
+<nav class="toc" aria-label="Secções"><div class="wrap">
+  <a href="#sintese">Síntese</a><a href="#metodo">Método</a><a href="#nivel">Nível</a><a href="#densidade">Densidade</a><a href="#elite">Elite</a><a href="#tendencia">Tendência</a><a href="#objetivos">Objetivos</a><a href="#recomendacoes">Recomendações</a>
+</div></nav>
+<main class="wrap">
+<section id="sintese">
+  <h2><span class="n">1</span>Síntese</h2>
+  <ul class="pts">
+    <li><b>Ganho real, mas concentrado no topo.</b> A média global do 1.º classificado subiu +9,9 pts (+1,7%) entre 2024 e 2026. No Top-16 a variação é nula (−0,2 pts): o sistema produz melhores campeões, mas não mais nadadores de nível.</li>
+    <li><b>Juvenis são o motor.</b> Único escalão que melhora em todos os cortes: +24,5 no 1.º e +10,7 no Top-16. São as gerações de 2010–2011, as mais fortes do universo analisado.</li>
+    <li><b>Juniores em erosão de densidade, com recuperação à vista.</b> O topo mantém-se (1.º: −0,7), mas o Top-16 perde 12,6 pts e os juniores com ≥ 600 pts caem de 130 para 102 (feminino: 48 → 31). A chegada das gerações juvenis projeta o Top-5 júnior para 639 pts e o 1.º para 702 pts em 2028.</li>
+    <li><b>Infantis estáveis.</b> Variações dentro do ruído estatístico; os infantis de 2028 (hoje com 11–12 anos) ainda não constam dos rankings. Expectativa de estabilidade ou subida ligeira.</li>
+    <li><b>2028: a melhoria desloca-se, não se generaliza.</b> Projeção de melhoria nos juniores, ligeira descida nos juvenis (geração de 2012, a mais fraca observada) e estabilidade global. Os indicadores-objetivo são fixados acima do esperado: Top-5 júnior 645, juvenil 591, infantil 471 e global 567 pts em 2028.</li>
+  </ul>
+</section>
+<section id="metodo">
+  <h2><span class="n">2</span>Âmbito e método</h2>
+  <p>Rankings nacionais das épocas 2023/24, 2024/25 e 2025/26; 18 provas individuais de piscina; piscinas curta e longa em conjunto (melhor pontuação AQUA de cada nadador por prova). Escalões: <b>Infantis</b> 13–14 anos, <b>Juvenis</b> 15–16, <b>Juniores</b> 17–18 (idade = ano de fim de época − ano de nascimento).</p>
+  <p>Para cada prova × sexo × idade calcula-se a média dos N melhores (1.º, Top-3, 5, 8, 12, 16); o valor do escalão é a média dessas pontuações. A densidade lê-se pela descida entre o 1.º, o 8.º e o 16.º lugares e pelo número de nadadores acima de limiares de pontuação. Incluem-se estrangeiros filiados; só com portugueses, as conclusões mantêm-se (Top-5 global: <span id="por5"></span>).</p>
+</section>
+<section id="nivel">
+  <h2><span class="n">3</span>Evolução do nível por escalão</h2>
+  <div class="cap">Quadro 1 · Média das pontuações AQUA (M+F) · escolha o corte</div>
+  <div class="tabs" role="group" aria-label="Corte" id="cutTabs"></div>
+  <div class="tbl"><table id="t1"></table></div>
+  <p>O padrão é consistente: quanto mais restrito o corte, maior a melhoria. Em juvenis, o ganho passa de +24,5 (1.º) para +10,7 (Top-16); em juniores, de −0,7 para −12,6. Os juvenis evoluem de forma equilibrada entre sexos; nos juniores, o 1.º feminino melhora (+6,6) enquanto o Top-16 feminino cai 24,2 pts e o 1.º masculino recua 8,0 pts.</p>
+</section>
+<section id="densidade">
+  <h2><span class="n">4</span>Densidade competitiva</h2>
+  <div class="cap">Figura 1 · Variação 2026 vs 2024 por corte</div>
+  <div class="fig"><svg id="fig1" viewBox="0 0 760 310" role="img" aria-label="Variação 2026 versus 2024 por corte e escalão"></svg></div>
+  <p class="note">A melhoria dilui-se à medida que o grupo alarga: em todos os escalões, o ganho no 1.º é maior do que no Top-16.</p>
+  <div class="cap">Quadro 2 · Indicadores de densidade (2026 e evolução)</div>
+  <div class="tbl"><table id="t2"></table></div>
+  <p><b>Leitura crítica.</b> A amplitude entre o 1.º e o 16.º alarga-se em todos os escalões, com expressão máxima nos juniores (+17,4 pts): o 16.º júnior perdeu 18,1 pts em duas épocas.</p>
+  <ul class="pts">
+    <li><b>Juniores femininos:</b> o grupo com ≥ 600 pts reduziu-se 35% (48 → 31), sinal de abandono ou estagnação entre os 16 e os 18 anos.</li>
+    <li><b>Juvenis:</b> única base em expansão (≥ 600 pts: 47 → 53 → 60; ≥ 650 pts: 11 → 18 → 18), com crescimento equilibrado entre sexos.</li>
+    <li><b>Infantis:</b> a base de ≥ 500 pts recuou 29% face a 2024 e o setor masculino permanece muito abaixo do feminino (Top-5: 421,6 vs 496,2), um diferencial esperado pela maturação, mas sem progressão em três épocas.</li>
+  </ul>
+</section>
+<section id="elite">
+  <h2><span class="n">5</span>Universo da elite</h2>
+  <div class="two">
+    <div>
+      <div class="cap">Quadro 3 · Indicadores de elite</div>
+      <div class="tbl"><table id="t3"></table></div>
+    </div>
+    <div>
+      <div class="cap">Quadro 4 · As 8 melhores pontuações de 2026</div>
+      <div class="tbl"><table id="t4"></table></div>
+    </div>
+  </div>
+  <p>O pico de elite subiu (média das 10 melhores pontuações individuais: 750,7 → 762,4), mas a elite estreitou-se: há menos nadadores acima de 700 pts (23 → 21 → 20), todos juniores ou juvenis, e os 1.ºs lugares estão mais concentrados (em juniores, 37 → 31 nadadores distintos em 72 lugares). O peso estrangeiro nos 1.ºs lugares diminuiu (17 → 8), pelo que a melhoria é essencialmente nacional. Risco imediato: 4 dos 8 nadadores do Quadro 4 têm 18 anos e saem deste universo em 2027.</p>
+</section>
+<section id="tendencia">
+  <h2><span class="n">6</span>Tendência esperada até 2028</h2>
+  <p>Foram testados dois modelos. A <b>tendência linear</b> extrapola cada escalão e ignora que os escalões mudam de nadadores. O <b>modelo por gerações</b> segue cada geração idade a idade: o nível de uma idade em 2027 é o da idade anterior em 2026, mais a progressão média observada nessa transição. Os juniores de 2028 são os juvenis de 2026 e os juvenis de 2028 são os infantis de 2026, pelo que dois terços da projeção assentam em nadadores já observados. A margem de erro (IC 95%) resulta de 4000 reamostragens que combinam a variabilidade entre provas e a incerteza da progressão. O modelo por gerações é a referência.</p>
+  <div class="cap">Figura 2 · Média Top-5 observada, projetada por gerações (IC 95%) e objetivo</div>
+  <div class="fig"><svg id="fig2" viewBox="0 0 760 330" role="img" aria-label="Média Top-5 por escalão, 2024 a 2028, com projeção e objetivo"></svg>
+    <div class="legend"><span><svg width="26" height="12" aria-hidden="true"><line x1="0" y1="6" x2="26" y2="6" stroke="currentColor" stroke-width="2"/></svg>observado</span><span><svg width="26" height="12" aria-hidden="true"><line x1="0" y1="6" x2="26" y2="6" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><circle cx="13" cy="6" r="4" fill="var(--surface)" stroke="currentColor" stroke-width="2"/></svg>projeção esperada (IC 95%)</span><span><svg width="14" height="14" aria-hidden="true"><rect x="3" y="3" width="8" height="8" transform="rotate(45 7 7)" fill="currentColor"/></svg>indicador-objetivo</span></div>
+  </div>
+  <div class="cap">Quadro 5 · Projeção por gerações vs tendência linear (pontos AQUA)</div>
+  <div class="tbl"><table id="t5"></table></div>
+  <ul class="pts">
+    <li><b>Juniores vão melhorar:</b> as gerações de 2010–2011 chegam a juniores com progressão demonstrada. A condição é manter a progressão dos 17 para os 18 anos, a mais fraca (5 a 7 pts no Top-16), que é onde se perde densidade.</li>
+    <li><b>A melhoria desloca-se:</b> os juvenis fortes são substituídos pelos infantis de 2026, mais fracos (os 14 anos de 2026 têm o Top-5 mais baixo das três épocas: 493,5). É uma geração forte a avançar de escalão, não uma subida do sistema como um todo.</li>
+    <li><b>Infantis com expectativa modesta:</b> o único indício positivo é o nível de entrada aos 13 anos, acima de 2024 (409,7 → 431,6 → 424,3). A projeção admite uma subida ligeira, sem significado estatístico.</li>
+  </ul>
+</section>
+<section id="objetivos">
+  <h2><span class="n">7</span>Indicadores-objetivo 2027 e 2028</h2>
+  <p>Os objetivos são fixados acima do valor esperado, no percentil 75 da projeção por gerações: o nível alcançado quando a progressão das gerações se aproxima da melhor observada. Sem intervenção, a probabilidade de o atingir é de cerca de 1 em 4; exige ganho real de progressão e retenção, mas permanece dentro do intervalo de confiança. Nenhum objetivo fica abaixo do valor real de 2026 e o de 2028 nunca é inferior ao de 2027. O valor esperado serve de limiar de alerta.</p>
+  <div class="cap">Quadro 6 · Valor esperado e indicador-objetivo (pontos AQUA; n.º de nadadores)</div>
+  <div class="tbl"><table id="t6"></table></div>
+</section>
+<section id="recomendacoes">
+  <h2><span class="n">8</span>Recomendações</h2>
+  <ul class="pts">
+    <li><b>Retenção e progressão júnior (prioridade 1):</b> acompanhamento individual dos juvenis de 16 anos com ≥ 600 pts na transição para júnior, com foco no setor feminino.</li>
+    <li><b>Densidade como indicador de gestão:</b> adotar o Top-16 e o n.º de nadadores ≥ 600 pts como indicadores anuais por escalão, a par do 1.º classificado.</li>
+    <li><b>Capitalizar a geração juvenil:</b> é a geração que sustenta os objetivos de 2028 em juniores; integrá-la nos programas de alto rendimento e seleções jovens.</li>
+    <li><b>Geração de 2012:</b> passa a juvenis em 2027–28 como a geração mais fraca observada; acompanhamento técnico específico para evitar que a descida projetada se agrave.</li>
+    <li><b>Infantis:</b> reforçar a base masculina e monitorizar o n.º de nadadores ≥ 500 pts, sem pressão de resultado.</li>
+    <li><b>Revisão anual:</b> recalcular tendência e margens em setembro de cada ano; com quatro ou mais épocas, as margens estreitam-se.</li>
+  </ul>
+  <p class="note"><b>Limitações:</b> três épocas; piscinas curta e longa agregadas; rankings de origem limitados a 1000 resultados por prova, o que deixa incompletas algumas células aos 13 anos nos cortes Top-12 e Top-16, sem impacto relevante nos valores de escalão.</p>
+</section>
+<footer>Direção Técnica Nacional · Federação Portuguesa de Natação · Pontuações AQUA (World Aquatics 2026)</footer>
+</main>
+<script>const D=
+{"obs":{"1|Infantis":[491.0,506.1,496.7],"1|Juvenis":[615.7,633.5,640.2],"1|Juniores":[679.3,677.9,678.6],"1|Global":[595.3,605.8,605.2],"3|Infantis":[470.1,482.2,473.8],"3|Juvenis":[590.0,603.8,607.9],"3|Juniores":[650.8,644.0,645.8],"3|Global":[570.6,576.6,575.8],"5|Infantis":[456.6,467.5,459.1],"5|Juvenis":[573.4,586.5,588.3],"5|Juniores":[632.8,625.0,625.8],"5|Global":[554.7,559.8,557.9],"8|Infantis":[441.8,451.5,443.8],"8|Juvenis":[556.7,568.3,570.1],"8|Juniores":[613.3,604.1,603.8],"8|Global":[537.9,541.7,539.9],"12|Infantis":[430.3,438.6,431.5],"12|Juvenis":[540.8,550.5,552.6],"12|Juniores":[593.5,583.8,582.0],"12|Global":[522.6,525.2,523.3],"16|Infantis":[422.2,430.7,422.8],"16|Juvenis":[528.7,536.9,539.4],"16|Juniores":[577.2,567.7,564.6],"16|Global":[511.0,513.3,510.8]},"sex5":{"1|Infantis|M":[448.5,460.0,459.1],"1|Infantis|F":[533.4,552.3,534.4],"1|Juvenis|M":[617.2,635.7,644.1],"1|Juvenis|F":[614.2,631.2,636.2],"1|Juniores|M":[702.8,699.4,694.8],"1|Juniores|F":[655.8,656.3,662.4],"1|Global|M":[589.5,598.4,599.3],"1|Global|F":[601.1,613.3,611.0],"5|Infantis|M":[418.4,419.9,421.6],"5|Infantis|F":[493.8,514.6,496.2],"5|Juvenis|M":[573.8,587.3,589.0],"5|Juvenis|F":[573.1,585.6,587.6],"5|Juniores|M":[648.5,645.1,644.7],"5|Juniores|F":[617.1,604.9,606.9],"5|Global|M":[548.1,551.3,552.2],"5|Global|F":[561.3,568.4,563.6],"16|Infantis|M":[387.6,386.8,388.7],"16|Infantis|F":[453.9,470.2,453.4],"16|Juvenis|M":[529.5,540.0,541.5],"16|Juvenis|F":[527.9,533.8,537.4],"16|Juniores|M":[591.5,586.1,590.1],"16|Juniores|F":[563.0,549.0,538.8],"16|Global|M":[506.7,508.7,511.5],"16|Global|F":[515.2,517.7,510.1]},"dens":[{"e":"Infantis","p1":496.7,"p8":412.3,"p16":391.7,"d16":-0.10000000000002274,"amp":[99.19999999999999,105.0],"c600":[4,6,4]},{"e":"Juvenis","p1":640.2,"p8":532.6,"p16":494.0,"d16":7.600000000000023,"amp":[129.30000000000007,146.20000000000005],"c600":[47,53,60]},{"e":"Juniores","p1":678.6,"p8":557.0,"p16":502.7,"d16":-18.099999999999966,"amp":[158.5,175.90000000000003],"c600":[130,102,102]},{"e":"Global","p1":605.2,"p8":502.3,"p16":466.4,"d16":-3.2000000000000455,"amp":[125.69999999999993,138.80000000000007],"c600":[181,161,166]}],"cnt":{"500|Infantis":[59,67,42],"500|Juvenis":[272,287,312],"500|Juniores":[313,298,294],"500|Global":[644,652,648],"600|Infantis":[4,6,4],"600|Juvenis":[47,53,60],"600|Juniores":[130,102,102],"600|Global":[181,161,166],"650|Infantis":[0,0,0],"650|Juvenis":[11,18,18],"650|Juniores":[50,48,46],"650|Global":[61,66,64],"700|Infantis":[0,0,0],"700|Juvenis":[2,4,4],"700|Juniores":[21,17,16],"700|Global":[23,21,20]},"cnt600sex":{"Infantis|M":[0,0,0],"Infantis|F":[4,6,4],"Juvenis|M":[26,28,31],"Juvenis|F":[21,25,29],"Juniores|M":[82,64,71],"Juniores|F":[48,38,31]},"elite_idx":{"2024":[750.7,726.8],"2025":[766.4,733.0],"2026":[762.4,731.7]},"firsts":{"Infantis":[29,35,32],"Juvenis":[34,32,31],"Juniores":[37,37,31]},"firsts_foreign":{"Infantis":[4,3,2],"Juvenis":[5,3,1],"Juniores":[8,5,5]},"top8":[["Rui Pereira","M","18","Juniores","1500m Liv","815"],["Miguel Oliveira","M","17","Juniores","100m Cos","781"],["Rafaela Mendes","F","18","Juniores","100m Cos","780"],["Miguel Medeiros","M","18","Juniores","400m Liv","775"],["Eva Coutinho","F","17","Juniores","50m Liv","752"],["Duarte Ferreira","M","18","Juniores","100m Mar","752"],["Rodolfo Alecrim","M","16","Juvenis","100m Liv","747"],["Santiago Parreira","M","17","Juniores","200m Liv","742"]],"trend":[{"n":1,"e":"Infantis","real":496.7,"lin":506.5,"g27":[499.9,470.8,531.1],"g28":[498.2,467.6,531.6]},{"n":1,"e":"Juvenis","real":640.2,"lin":666.6,"g27":[634.5,620.2,649.6],"g28":[635.5,610.1,659.1]},{"n":1,"e":"Juniores","real":678.6,"lin":677.5,"g27":[692.9,676.3,708.2],"g28":[702.1,681.7,723.1]},{"n":1,"e":"Global","real":605.2,"lin":617.0,"g27":[609.1,595.5,623.1],"g28":[611.9,592.4,630.8]},{"n":5,"e":"Infantis","real":459.1,"lin":464.8,"g27":[462.1,437.70000000000005,488.0],"g28":[460.90000000000003,435.5,488.6]},{"n":5,"e":"Juvenis","real":588.3,"lin":605.1,"g27":[582.9,569.9,594.9],"g28":[583.3,562.8,600.4]},{"n":5,"e":"Juniores","real":625.8,"lin":617.4,"g27":[635.7,622.2,648.8],"g28":[639.1,623.5,655.3]},{"n":5,"e":"Global","real":557.9,"lin":562.3,"g27":[560.4,547.4999999999999,572.9999999999999],"g28":[561.1999999999999,544.8,577.0999999999999]},{"n":16,"e":"Infantis","real":422.8,"lin":426.1,"g27":[427.5,405.2,452.3],"g28":[425.3,401.59999999999997,450.8]},{"n":16,"e":"Juvenis","real":539.4,"lin":551.1,"g27":[532.5,520.2,545.2],"g28":[532.5,513.6,550.1]},{"n":16,"e":"Juniores","real":564.6,"lin":550.9,"g27":[571.9,556.8,586.8],"g28":[574.9,559.0,590.7]},{"n":16,"e":"Global","real":510.8,"lin":511.4,"g27":[512.5,499.40000000000003,526.1000000000001],"g28":[512.7,497.20000000000005,528.7]}],"obj":[{"ind":"1.\u00ba","e":"Infantis","base":491.0,"real":496.7,"e27":499.9,"o27":510.7,"e28":498.2,"o28":510.7,"cnt":false},{"ind":"1.\u00ba","e":"Juvenis","base":615.7,"real":640.2,"e27":634.5,"o27":640.2,"e28":635.5,"o28":645.8,"cnt":false},{"ind":"1.\u00ba","e":"Juniores","base":679.3,"real":678.6,"e27":692.9,"o27":698.5,"e28":702.1,"o28":709.7,"cnt":false},{"ind":"1.\u00ba","e":"Global","base":595.3,"real":605.2,"e27":609.1,"o27":614.0,"e28":611.9,"o28":619.1,"cnt":false},{"ind":"Top-5","e":"Infantis","base":456.6,"real":459.1,"e27":462.1,"o27":470.8,"e28":460.90000000000003,"o28":470.8,"cnt":false},{"ind":"Top-5","e":"Juvenis","base":573.4,"real":588.3,"e27":582.9,"o27":588.3,"e28":583.3,"o28":591.4,"cnt":false},{"ind":"Top-5","e":"Juniores","base":632.8,"real":625.8,"e27":635.7,"o27":640.5,"e28":639.1,"o28":644.7,"cnt":false},{"ind":"Top-5","e":"Global","base":554.7,"real":557.9,"e27":560.4,"o27":564.6999999999999,"e28":561.1999999999999,"o28":567.0999999999999,"cnt":false},{"ind":"Top-16","e":"Infantis","base":422.2,"real":422.8,"e27":427.5,"o27":436.2,"e28":425.3,"o28":436.2,"cnt":false},{"ind":"Top-16","e":"Juvenis","base":528.7,"real":539.4,"e27":532.5,"o27":539.4,"e28":532.5,"o28":540.2,"cnt":false},{"ind":"Top-16","e":"Juniores","base":577.2,"real":564.6,"e27":571.9,"o27":577.5,"e28":574.9,"o28":580.7,"cnt":false},{"ind":"Top-16","e":"Global","base":511.0,"real":510.8,"e27":512.5,"o27":517.2,"e28":512.7,"o28":518.4000000000001,"cnt":false},{"ind":"N.\u00ba \u2265 600 pts","e":"Infantis","base":4,"real":4,"e27":5,"o27":6.650956086635862,"e28":5,"o28":6.650956086635862,"cnt":true},{"ind":"N.\u00ba \u2265 600 pts","e":"Juvenis","base":47,"real":60,"e27":58,"o27":63.79796722998673,"e28":56,"o28":63.79796722998673,"cnt":true},{"ind":"N.\u00ba \u2265 600 pts","e":"Juniores","base":130,"real":102,"e27":108,"o27":116.63798778651602,"e28":112,"o28":122.53360873585116,"cnt":true},{"ind":"N.\u00ba \u2265 600 pts","e":"Global","base":181,"real":166,"e27":172,"o27":184.21131020816358,"e28":172,"o28":187.28435255416466,"cnt":true},{"ind":"N.\u00ba \u2265 700 pts","e":"Global","base":23,"real":20,"e27":22,"o27":25.232390446712774,"e28":22,"o28":25.319065079205288,"cnt":true}],"fig2":{"Infantis":{"obs":[456.6,467.5,459.1],"p":[[462.1,437.70000000000005,488.0],[460.90000000000003,435.5,488.6]],"obj":[470.8,470.8]},"Juvenis":{"obs":[573.4,586.5,588.3],"p":[[582.9,569.9,594.9],[583.3,562.8,600.4]],"obj":[588.3,591.4]},"Juniores":{"obs":[632.8,625.0,625.8],"p":[[635.7,622.2,648.8],[639.1,623.5,655.3]],"obj":[640.5,644.7]}},"por5":[552.5,558.1,555.7]};
+const E=['Infantis','Juvenis','Juniores','Global'];
+const VAR={Infantis:'--inf',Juvenis:'--juv',Juniores:'--jun',Global:'--glo'};
+const f1=v=>v.toFixed(1).replace('.',',');
+const f0=v=>String(Math.round(v));
+const sg=v=>{v=Math.round(v*10)/10;return (v>0?'+':v<0?'−':'')+f1(Math.abs(v));};
+const sgi=v=>{v=Math.round(v);return (v>0?'+':v<0?'−':'')+Math.abs(v);};
+const pc=(a,b)=>sg((b/a-1)*100)+'%';
+const cls=v=>v>0.05?'pos':(v<-0.05?'neg':'');
+const esc=e=>`<span class="esc"><i style="background:var(${VAR[e]})"></i>${e}</span>`;
+const $=id=>document.getElementById(id);
+const ob=(n,e)=>D.obs[n+'|'+e];
+$('por5').textContent=f1(D.por5[0])+' → '+f1(D.por5[2])+', '+sg(D.por5[2]-D.por5[0])+' pts';
+// Table 1 with tabs
+const CUTS=[[1,'1.º'],[3,'Top-3'],[5,'Top-5'],[8,'Top-8'],[12,'Top-12'],[16,'Top-16']];
+let cut=5;
+function t1(){
+  let h='<thead><tr><th>Escalão</th><th>2024</th><th>2025</th><th>2026</th><th>Δ 26–24</th><th>Δ %</th></tr></thead><tbody>';
+  E.forEach(e=>{const v=ob(cut,e),d=v[2]-v[0];h+=`<tr class="${e==='Global'?'tot':''}"><td>${esc(e)}</td><td>${f1(v[0])}</td><td>${f1(v[1])}</td><td>${f1(v[2])}</td><td class="${cls(d)}">${sg(d)}</td><td class="${cls(d)}">${pc(v[0],v[2])}</td></tr>`;});
+  $('t1').innerHTML=h+'</tbody>';
+  document.querySelectorAll('#cutTabs button').forEach(b=>b.setAttribute('aria-pressed',String(+b.dataset.n===cut)));
+}
+$('cutTabs').innerHTML=CUTS.map(([n,l])=>`<button type="button" data-n="${n}" aria-pressed="false">${l}</button>`).join('');
+$('cutTabs').addEventListener('click',ev=>{const b=ev.target.closest('button');if(!b)return;cut=+b.dataset.n;t1();});
+t1();
+// Table 2
+{let h='<thead><tr><th>Escalão</th><th>1.º</th><th>8.º</th><th>16.º</th><th>Δ 16.º 26–24</th><th>Amplitude 1.º–16.º<br>2024 → 2026</th><th>N.º ≥ 600 pts<br>24 / 25 / 26</th><th>Δ % ≥ 600</th></tr></thead><tbody>';
+ D.dens.forEach(r=>{const dc=(r.c600[2]/r.c600[0]-1)*100;h+=`<tr class="${r.e==='Global'?'tot':''}"><td>${esc(r.e)}</td><td>${f1(r.p1)}</td><td>${f1(r.p8)}</td><td>${f1(r.p16)}</td><td class="${cls(r.d16)}">${sg(r.d16)}</td><td>${f1(r.amp[0])} → ${f1(r.amp[1])}</td><td>${r.c600.join(' / ')}</td><td class="${cls(dc)}">${sg(dc)}%</td></tr>`;});
+ $('t2').innerHTML=h+'</tbody>';}
+// Table 3
+{const el=D.elite_idx,sum=(o,i)=>['Infantis','Juvenis','Juniores'].reduce((s,e)=>s+o[e][i],0);
+ const rows=[['Média das 10 melhores pontuações',el['2024'][0],el['2025'][0],el['2026'][0],1],['Média das 25 melhores pontuações',el['2024'][1],el['2025'][1],el['2026'][1],1],
+ ['Nadadores ≥ 700 pts',...D.cnt['700|Global'],0],['Nadadores ≥ 650 pts',...D.cnt['650|Global'],0],
+ ['Nadadores distintos nos 216 1.ºs lugares',sum(D.firsts,0),sum(D.firsts,1),sum(D.firsts,2),0],['1.ºs lugares de estrangeiros',sum(D.firsts_foreign,0),sum(D.firsts_foreign,1),sum(D.firsts_foreign,2),0]];
+ let h='<thead><tr><th>Indicador</th><th>2024</th><th>2025</th><th>2026</th><th>Δ</th></tr></thead><tbody>';
+ rows.forEach(([l,a,b,c,dec])=>{const d=c-a;h+=`<tr><td>${l}</td><td>${dec?f1(a):a}</td><td>${dec?f1(b):b}</td><td>${dec?f1(c):c}</td><td class="${l.includes('estrangeiros')||l.includes('distintos')?'':cls(d)}">${dec?sg(d):sgi(d)}</td></tr>`;});
+ $('t3').innerHTML=h+'</tbody>';}
+// Table 4 top 8
+{let h='<thead><tr><th>#</th><th class="l">Nadador</th><th class="l">Escalão</th><th>Idade</th><th class="l">Prova</th><th>Pts</th></tr></thead><tbody>';
+ D.top8.forEach((r,i)=>{h+=`<tr><td>${i+1}</td><td class="l">${r[0]} <span class="muted">(${r[1]})</span></td><td class="l">${esc(r[3])}</td><td>${r[2]}</td><td class="l">${r[4]}</td><td><b>${r[5]}</b></td></tr>`;});
+ $('t4').innerHTML=h+'</tbody>';}
+// Table 5 trend
+{let h='<thead><tr><th>Corte</th><th class="l">Escalão</th><th>Real 2026</th><th>Linear 2028</th><th>Gerações 2027 (IC 95%)</th><th>Gerações 2028 (IC 95%)</th><th>Δ 2028–2026</th></tr></thead><tbody>';
+ const lab={1:'1.º',5:'Top-5',16:'Top-16'};
+ D.trend.forEach(r=>{const d=r.g28[0]-r.real;h+=`<tr class="${r.e==='Global'?'tot':''}${r.e==='Infantis'?' grp':''}"><td>${r.e==='Infantis'?lab[r.n]:''}</td><td class="l">${esc(r.e)}</td><td>${f1(r.real)}</td><td class="muted">${f1(r.lin)}</td><td>${f1(r.g27[0])} <span class="muted">(${f0(r.g27[1])}–${f0(r.g27[2])})</span></td><td>${f1(r.g28[0])} <span class="muted">(${f0(r.g28[1])}–${f0(r.g28[2])})</span></td><td class="${cls(d)}">${sg(d)}</td></tr>`;});
+ $('t5').innerHTML=h+'</tbody>';}
+// Table 6 objectives
+{let h='<thead><tr><th>Indicador</th><th class="l">Escalão</th><th>Base 2024</th><th>Real 2026</th><th>Esperado 2027</th><th class="obj">Objetivo 2027</th><th>Esperado 2028</th><th class="obj">Objetivo 2028</th><th>Δ obj. 28–26</th></tr></thead><tbody>';
+ let prev='';
+ D.obj.forEach(r=>{const fmt=r.cnt?(v=>String(v)):f1;const d=r.o28-r.real;const first=r.ind!==prev;prev=r.ind;
+  h+=`<tr class="${r.e==='Global'?'tot':''}${first?' grp':''}"><td>${first?r.ind:''}</td><td class="l">${esc(r.e)}</td><td>${fmt(r.base)}</td><td>${fmt(r.real)}</td><td class="muted">${f0(r.e27)}</td><td class="obj">${f0(r.o27)}</td><td class="muted">${f0(r.e28)}</td><td class="obj">${f0(r.o28)}</td><td class="${cls(d)}">${r.cnt?sgi(d):sg(d)}</td></tr>`;});
+ $('t6').innerHTML=h+'</tbody>';}
+// ---- charts
+const NS='http://www.w3.org/2000/svg';
+const mk=(p,tag,at,txt)=>{const n=document.createElementNS(NS,tag);for(const k in at)n.setAttribute(k,at[k]);if(txt!=null)n.textContent=txt;p.appendChild(n);return n;};
+const col=e=>`var(${VAR[e]})`;
+// Fig 1
+{const s=$('fig1'),L=56,R=640,T=16,B=270,x=i=>L+i*(R-L)/5,y=v=>T+(28-v)*(B-T)/(28+15);
+ [-10,-5,0,5,10,15,20,25].forEach(v=>{mk(s,'line',{x1:L,x2:R,y1:y(v),y2:y(v),class:v===0?'zero':'grid','stroke-width':v===0?1.2:1});mk(s,'text',{x:L-8,y:y(v)+4,'text-anchor':'end'},(v>0?'+':v<0?'−':'')+Math.abs(v));});
+ CUTS.forEach(([n,l],i)=>mk(s,'text',{x:x(i),y:B+22,'text-anchor':'middle'},l));
+ mk(s,'text',{x:14,y:(T+B)/2,transform:`rotate(-90 14 ${(T+B)/2})`,'text-anchor':'middle'},'Δ pontos 2026 vs 2024');
+ const off={Infantis:-9,Global:12,Juvenis:0,Juniores:0};
+ E.forEach(e=>{const d=CUTS.map(([n])=>{const v=ob(n,e);return v[2]-v[0];});
+  mk(s,'polyline',{points:d.map((v,i)=>`${x(i)},${y(v)}`).join(' '),fill:'none',stroke:col(e),'stroke-width':2.2,'stroke-dasharray':e==='Global'?'6 4':'none','stroke-linejoin':'round'});
+  d.forEach((v,i)=>{const c=mk(s,'circle',{cx:x(i),cy:y(v),r:4.5,fill:col(e),stroke:'var(--surface)','stroke-width':1.5});mk(c,'title',{},`${e} · ${CUTS[i][1]}: ${sg(v)} pts`);});
+  mk(s,'text',{x:x(5)+12,y:y(d[5])+4+off[e],class:'lbl'},`${e} ${sg(d[5])}`);
+ });}
+// Fig 2
+{const s=$('fig2'),L=56,R=620,T=14,B=290,yr=[2024,2025,2026,2027,2028],x=t=>L+(t-2024)*(R-L)/4,lo=430,hi=665,y=v=>T+(hi-v)*(B-T)/(hi-lo);
+ mk(s,'rect',{x:(x(2026)+x(2027))/2,y:T,width:R+30-(x(2026)+x(2027))/2,height:B-T,class:'bandbg'});
+ [450,500,550,600,650].forEach(v=>{mk(s,'line',{x1:L,x2:R+30,y1:y(v),y2:y(v),class:'grid'});mk(s,'text',{x:L-8,y:y(v)+4,'text-anchor':'end'},v);});
+ yr.forEach(t=>mk(s,'text',{x:x(t),y:B+22,'text-anchor':'middle'},t));
+ mk(s,'text',{x:(x(2027)+x(2028))/2,y:T+14,'text-anchor':'middle'},'projeção');
+ mk(s,'text',{x:14,y:(T+B)/2,transform:`rotate(-90 14 ${(T+B)/2})`,'text-anchor':'middle'},'Média Top-5 (pontos AQUA)');
+ const off={Juniores:-4,Juvenis:6,Infantis:0};
+ ['Infantis','Juvenis','Juniores'].forEach(e=>{const g=D.fig2[e],c=col(e);
+  mk(s,'polyline',{points:g.obs.map((v,i)=>`${x(2024+i)},${y(v)}`).join(' '),fill:'none',stroke:c,'stroke-width':2.4});
+  mk(s,'polyline',{points:[[2026,g.obs[2]],[2027,g.p[0][0]],[2028,g.p[1][0]]].map(([t,v])=>`${x(t)},${y(v)}`).join(' '),fill:'none',stroke:c,'stroke-width':2,'stroke-dasharray':'6 5'});
+  g.obs.forEach((v,i)=>{const n=mk(s,'circle',{cx:x(2024+i),cy:y(v),r:4.5,fill:c,stroke:'var(--surface)','stroke-width':1.5});mk(n,'title',{},`${e} ${2024+i}: ${f1(v)}`);});
+  g.p.forEach((p,i)=>{const t=2027+i;mk(s,'line',{x1:x(t),x2:x(t),y1:y(p[1]),y2:y(p[2]),stroke:c,'stroke-width':1.4});[p[1],p[2]].forEach(v=>mk(s,'line',{x1:x(t)-5,x2:x(t)+5,y1:y(v),y2:y(v),stroke:c,'stroke-width':1.4}));
+   const n=mk(s,'circle',{cx:x(t),cy:y(p[0]),r:5,fill:'var(--surface)',stroke:c,'stroke-width':2});mk(n,'title',{},`${e} ${t} esperado: ${f1(p[0])} (IC ${f0(p[1])}–${f0(p[2])})`);
+   const ox=x(t)+16,oy=y(g.obj[i]);const d=mk(s,'rect',{x:ox-5,y:oy-5,width:10,height:10,fill:c,stroke:'var(--surface)','stroke-width':1,transform:`rotate(45 ${ox} ${oy})`});mk(d,'title',{},`${e} ${t} objetivo: ${f0(g.obj[i])}`);});
+  mk(s,'text',{x:x(2028)+30,y:y(g.p[1][0])+4+off[e],class:'lbl'},`${e}`);
+  mk(s,'text',{x:x(2028)+30,y:y(g.p[1][0])+19+off[e]},`obj. ${f0(g.obj[1])}`);
+ });}
+</script>
+</body>
+</html>
